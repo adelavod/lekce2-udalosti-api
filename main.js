@@ -19,3 +19,16 @@ let ctverecek = document.querySelector("div.zluty");
  function zmenStyl(){
      nadpis.classList.toggle("zeleny");
  }
+let paragraph = document.querySelector("p")
+function ztucneni () {
+    paragraph.classList.add("tucne");
+};
+function zcervenani () {
+    paragraph.classList.toggle("cerveny");
+};
+function zestihleni () {
+    paragraph.classList.remove("tucne");
+};
+function biggerOnClick() {
+    paragraph.style.fontSize = paragraph.style.fontSize + 1;
+};
