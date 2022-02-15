@@ -19,16 +19,22 @@ let ctverecek = document.querySelector("div.zluty");
  function zmenStyl(){
      nadpis.classList.toggle("zeleny");
  }
-let paragraph = document.querySelector("p")
+
 function ztucneni () {
+    let paragraph = document.querySelector("p")
     paragraph.classList.add("tucne");
 };
 function zcervenani () {
+    let paragraph = document.querySelector("p")
     paragraph.classList.toggle("cerveny");
 };
 function zestihleni () {
+    let paragraph = document.querySelector("p")
     paragraph.classList.remove("tucne");
 };
 function biggerOnClick() {
-    paragraph.style.fontSize = paragraph.style.fontSize + 1;
+    let paragraph = document.querySelector("p")
+    style = window.getComputedStyle(paragraph, null).getPropertyValue('font-size');
+    currentSize = parseFloat(style);
+    paragraph.style.fontSize = currentSize + 1 ;
 };
