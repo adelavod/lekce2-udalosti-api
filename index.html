@@ -9,30 +9,32 @@
 </head>
 <body>
 
-	<h1 onclick="zmenStyl()">Změna tříd, události</h1>
 
-	<div onmouseover="priNajeti()" class="ctverecek zluty"></div>
+<h2>Úkol na stylování odstavce písma</h2>
 
-	<div onmouseover="priNajeti()"class="ctverecek zeleny"></div>
-
-	<h2>Úkol na stylování odstavce písma</h2>
-
-	<div class="parag">
-		<p onmouseover="ztucneni()" onmouseout="zestihleni()">
-			V elipse spí lev.
-		</p>
-		<button onclick="zcervenani()">
-			červený po kliknutí
-		</button>
-		<button onclick="biggerOnClick()">
-			větší po kliknutí
-		</button>
+<div class="parag">
+	<p onmouseover="ztucneni()" onmouseout="zestihleni()">
+		V elipse spí lev.
+	</p>
+	<button onclick="zcervenani()">
+		červený po kliknutí
+	</button>
+	<button onclick="biggerOnClick()">
+		větší po kliknutí
+	</button>
 	</div>
-	<img class="obrazek" src="obrazky/kocka.jpg">
-	<button class="tlacitko">Čudlajs</button>
 
-	<audio src="audio/dingdingdang.mp3" preload="auto"></audio>
-	<script type="text/javascript" src="main.js"></script>
+<h2>Audio player</h2>	
 
+<audio id="zvukovaStopa" src="audio/dingdingdang.mp3" preload="auto"></audio>
+
+<button onclick="startAudio()">PLAY</button>
+<button onclick="pauseAudio()">PAUSE</button>
+<button onclick="volumeDown()">volume down</button>
+<button onclick="volumeNormal()">volume normal</button>
+<button onclick="volumeUp()">volume up</button>
+<button onclick="replayAudio()">REPLAY</button>
+
+<script type="text/javascript" src="main.js"></script>
 </body>
 </html>

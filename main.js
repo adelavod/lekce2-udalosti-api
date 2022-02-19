@@ -1,41 +1,55 @@
-// tady je místo pro náš program
-console.log("ahoyyy");
-
-let nadpis = document.querySelector("h1");
-nadpis.classList.add("zluty");
-nadpis.classList.remove("zluty"); // dali jsme to tam a zas odebrali
-// jeste TOGGLE
-
-let ctverecek = document.querySelector("div.zluty");
- ctverecek.classList.add("ctverecek");
-
- let pocitadlo = 0;
- function priNajeti () {
-     console.log("test " + pocitadlo);
-
-     pocitadlo = pocitadlo + 1;
- };
-
- function zmenStyl(){
-     nadpis.classList.toggle("zeleny");
- }
-
+// po najeti mysi text ztucni a po mouseout odtucni
 function ztucneni () {
     let paragraph = document.querySelector("p")
     paragraph.classList.add("tucne");
-};
-function zcervenani () {
-    let paragraph = document.querySelector("p")
-    paragraph.classList.toggle("cerveny");
 };
 function zestihleni () {
     let paragraph = document.querySelector("p")
     paragraph.classList.remove("tucne");
 };
+
+// V elipse spí lev - tlacitko na zcervenani textu
+function zcervenani () {
+    let paragraph = document.querySelector("p")
+    paragraph.classList.toggle("cerveny");
+};
+
+//V elipse spí lev - tlačítko, po kterém se text zvětší o 1 px
 function biggerOnClick() {
     let paragraph = document.querySelector("p")
     let computedSize = window.getComputedStyle(paragraph, null).getPropertyValue('font-size');
     
     currentSize = parseFloat(computedSize);
     paragraph.style.fontSize = (currentSize + 1) + 'px' ;
-};
+}
+
+// Audio Player
+let audioFile = document.getElementById('zvukovaStopa');
+
+function startAudio() {
+    audioFile.play();
+    console.log("PLAY")
+}
+
+function pauseAudio() {
+audioFile.pause();
+console.log("PAUSE")
+}
+
+function volumeDown() {
+audioFile.volume = 0;
+}
+
+function volumeNormal() {
+    audioFile.volume = 0.5;
+}
+
+function volumeUp() {
+    audioFile.volume = 1;
+}
+
+function replayAudio() {
+audioFile.load();
+audioFile.play();
+console.log("SONG RELOADED");
+}
