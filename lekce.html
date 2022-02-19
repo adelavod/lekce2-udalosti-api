@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>JavaScript a DOM</title>
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700|Source+Sans+Pro:400,400i,700,700i&amp;subset=latin-ext" rel="stylesheet">
+	<link rel="stylesheet" href="lekce.css">
+</head>
+<body onkeydown="stiskKlavesy(event)">
+
+	<h1 onclick="zmenStyl()">Změna tříd, události</h1>
+<p>Tyhle čtverečky reagují jako jeden muž.</p>
+	<div class="radek">
+	
+	<div onclick="makeRed()" class="ctverecek"></div>
+	<div onclick="makeRed()"class="ctverecek"></div>
+	<div onclick="makeRed()"class="ctverecek"></div>
+	<div onclick="makeRed()"class="ctverecek"></div>
+</div>
+<p>Jak zaměřit pouze jeden čtvereček bez použití #id?</p>
+<div class="radek">
+
+	<div onclick="colorChange()" class="rosebud"></div>
+	<div onclick="colorChange()" class="rosebud"></div>
+	<div onclick="colorChange()" class="rosebud"></div>
+	<div onclick="colorChange()" class="rosebud"></div>
+</div>
+	<h2>Úkol na stylování odstavce písma</h2>
+
+	<div class="parag">
+		<p onmouseover="ztucneni()" onmouseout="zestihleni()">
+			V elipse spí lev.
+		</p>
+		<button onclick="zcervenani()">
+			červený po kliknutí
+		</button>
+		<button onclick="biggerOnClick()">
+			větší po kliknutí
+		</button>
+	</div>
+
+	<h2>Vlastnosti události</h2>
+	<p>Každá událost má event object - sadu informací o události.</p>
+	<div class="cactus"></div>
+	<ul>
+		<li>onkeydown dáváme do < body ></li>
+		<li>u console.log(udalost) se vypíše celá sada informací o události</li>
+		<li>u console.log(udalost.key) se vypíše jen konkrétní klávesa, která byla stisknuta</li>
+		<li>u každé události je event object složený z jiných informací</li>
+	</ul>
+
+	<h2>API a audio soubor</h2>
+
+	<audio id="zvukovaStopa" src="audio/dingdingdang.mp3" preload="auto"></audio>
+
+	<button onclick="startAudio()">PLAY</button>
+	<button onclick="pauseAudio()">PAUSE</button>
+	<button onclick="volumeDown()">volume down</button>
+	<button onclick="volumeNormal()">volume normal</button>
+	<button onclick="volumeUp()">volume up</button>
+	<button onclick="replayAudio()">REPLAY</button>
+
+	<script type="text/javascript" src="lekce.js"></script>
+
+</body>
+</html>
