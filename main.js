@@ -34,7 +34,8 @@ function zestihleni () {
 };
 function biggerOnClick() {
     let paragraph = document.querySelector("p")
-    style = window.getComputedStyle(paragraph, null).getPropertyValue('font-size');
-    currentSize = parseFloat(style);
-    paragraph.style.fontSize = currentSize + 1 ;
+    let computedSize = window.getComputedStyle(paragraph, null).getPropertyValue('font-size');
+    
+    currentSize = parseFloat(computedSize);
+    paragraph.style.fontSize = (currentSize + 1) + 'px' ;
 };
