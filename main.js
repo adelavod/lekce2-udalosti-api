@@ -23,6 +23,20 @@ function biggerOnClick() {
     paragraph.style.fontSize = (currentSize + 1) + 'px' ;
 }
 
+/**
+ * Lepší řešení - s parametry
+ * 
+ * @param {string} elementSelector 
+ * @param {int} fontSizeChange 
+ */
+ 
+ function zvetsitPismo(elementSelector, fontSizeChange) {
+    let element = document.querySelector(elementSelector);
+    let currentFontSize = parseInt(element.style.fontSize);
+    element.style.fontSize = (currentFontSize + fontSizeChange) + 'px';
+} 
+
+
 // Audio Player
 let audioFile = document.getElementById('zvukovaStopa');
 
@@ -53,3 +67,17 @@ audioFile.load();
 audioFile.play();
 console.log("SONG RELOADED");
 }
+
+// Lepší řešení (s parametry!)
+/* function prehraj(elementSelector) {
+    document.querySelector(elementSelector).play();
+}
+function pauzni(elementSelector) {
+    document.querySelector(elementSelector).pause();
+}
+function upravHlasitost(elementSelector, volumeValue) {
+    document.querySelector(elementSelector).volume = volumeValue;
+}
+function resetuj(elementSelector) {
+    document.querySelector(elementSelector).currentTime = 0;
+} */
